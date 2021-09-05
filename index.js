@@ -5,8 +5,8 @@ const ParseDashboard = require('parse-dashboard');
 const path = require('path');
 const args = process.argv || [];
 const test = args.some(arg => arg.includes('jasmine'));
-const databaseUri = process.env.DATABASE_URI || process.env.MONGODB_URI;
 require('dotenv').config();
+const databaseUri = process.env.DATABASE_URI || process.env.MONGODB_URI;
 
 if (!databaseUri) {
   console.log('DATABASE_URI not specified, falling back to localhost.');
